@@ -1,0 +1,51 @@
+FOOD DELIVERY APPLICATION - NETBEANS SETUP GUIDE
+
+1. PREREQUISITES:
+- Java JDK 8 or later
+- Oracle Database 10g or later
+- ojdbc8.jar driver
+- NetBeans IDE
+
+2. DATABASE SETUP:
+- Execute schema_setup.sql in your Oracle database
+- Verify tables: credential, customers, restaurant, food
+
+3. NETBEANS CONFIGURATION:
+a) Import Project:
+- File > Open Project
+- Select 'dbms project' folder
+- Click Open
+
+b) Add JDBC Driver:
+- Right-click project > Properties > Libraries
+- Click "Add JAR/Folder" under Compile tab
+- Select ojdbc8.jar
+- Click OK
+
+c) Set Main Class:
+- Right-click project > Properties > Run
+- Set Main Class to: com.mycompany.fooddelivery.Login
+- Click OK
+
+4. RUNNING THE APPLICATION:
+1. Test Database Connection:
+   - Right-click TestConnection.java > Run File
+   - Check Output window for "Connection successful"
+
+2. Launch Application:
+   - Click the green Run button in toolbar
+   - Or right-click project > Run
+   - Test credentials:
+     * Admin: admin/admin123
+     * Customer: user1/user123
+
+5. TROUBLESHOOTING:
+- ClassNotFoundException: Verify ojdbc8.jar is added correctly
+- SQLException: Check database is running and credentials match
+- UI Issues: Confirm images are in:
+  dbms project/fooddelivery/src/main/resources/com/mycompany/fooddelivery/images/
+
+6. REQUIRED IMAGES:
+- login_bg.jpg
+- app_icon.png 
+- food_*.jpg (for menu items)
